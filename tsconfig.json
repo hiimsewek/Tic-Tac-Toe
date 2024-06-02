@@ -9,9 +9,9 @@
     "paths": {
       "assets/*": ["assets/*"],
       "components": ["components"],
-      "constants/*": ["constants/*"],
       "contexts": ["contexts"],
-      "styles": ["styles"]
+      "styles": ["styles"],
+      "types": ["types"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",

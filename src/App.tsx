@@ -1,6 +1,6 @@
-import { Board, Button, Status } from "components";
-import { GameContext } from "contexts/Game";
 import { useContext } from "react";
+import { Board, Button, Status } from "components";
+import { GameContext } from "contexts";
 import { GameCtx } from "types";
 import "styles/globalStyles.css";
 

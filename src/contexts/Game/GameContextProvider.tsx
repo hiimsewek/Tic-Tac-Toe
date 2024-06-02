@@ -1,17 +1,16 @@
-import { createContext, useCallback, useState } from "react";
-import { Board, GameCtx, NullablePlayer } from "types";
+import { useCallback, useState } from "react";
+import GameContext from "./GameContext";
+import { Board, Nullable, NullablePlayer } from "types";
 
 type GameContextProviderProps = {
   children: React.ReactNode;
 };
 
-const GameContext = createContext<GameCtx | null>(null);
-
 const GameContextProvider = ({ children }: GameContextProviderProps) => {
   const [board, setBoard] = useState<Board>(Array(9).fill(null));
   const [result, setResult] = useState<NullablePlayer | "Draw">(null);
   const [xIsNext, setXisNext] = useState(true);
-  const [winningRow, setWinningRow] = useState<number[] | null>(null);
+  const [winningRow, setWinningRow] = useState<Nullable<number[]>>(null);
 
   const changeTurn = () => {
     setXisNext(!xIsNext);
@@ -63,5 +62,4 @@ const GameContextProvider = ({ children }: GameContextProviderProps) => {
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 };
 
-export default GameContext;
-export { GameContextProvider };
+export default GameContextProvider;

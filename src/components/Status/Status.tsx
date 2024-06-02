@@ -1,5 +1,5 @@
-import GameContext from "contexts/Game/GameCtx";
 import { useContext, useEffect } from "react";
+import { GameContext } from "contexts";
 import { GameCtx } from "types";
 import styles from "./Status.module.css";
 
@@ -23,6 +23,7 @@ const Status = () => {
   const status = !result
     ? `It is ${player}'s turn.`
     : `Game Over. ${gameResult}`;
+
   return <div className={styles.statusText}>{status}</div>;
 };
 

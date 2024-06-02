@@ -1,8 +1,8 @@
-import { Line, Square } from "components";
-import styles from "./Board.module.css";
 import { useContext } from "react";
-import GameContext from "contexts/Game/GameCtx";
+import { Line, Square } from "components";
+import { GameContext } from "contexts";
 import { GameCtx, Player } from "types";
+import styles from "./Board.module.css";
 
 const Board = () => {
   const { board, setBoard, changeTurn, xIsNext, result, winningRow } =

@@ -2,10 +2,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 500px;
+  width: calc(300px * sqrt(2));
   height: 2px;
   background-color: #079b7b;
-  transform-origin: 50% 0;
+  transform-origin: 0 100%;
   animation: cross 0.3s linear forwards;
 }
 
