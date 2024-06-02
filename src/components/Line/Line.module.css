@@ -1,0 +1,19 @@
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 2px;
+  background-color: #079b7b;
+  transform-origin: 50% 0;
+  animation: cross 0.3s linear forwards;
+}
+
+@keyframes cross {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
